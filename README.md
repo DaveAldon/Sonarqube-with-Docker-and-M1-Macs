@@ -26,6 +26,7 @@ Apple has started creating their own processors, called M1. They're built using 
 </details>
 <br>
 Combing all three of these technologies is the reason for this repository. But it wasn't that easy.
+
 #### SonarQube has a Docker guide that doesn't work on M1 Macs
 
 You can find their nice, 2 minute guide [here](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/). But, on an M1 you can only run it locally using the source zip file. I _really_ wanted to use Docker, which is their preferred method anyway.
