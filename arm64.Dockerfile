@@ -136,4 +136,3 @@ EXPOSE 9000
 STOPSIGNAL SIGINT
 ENTRYPOINT ["/opt/sonarqube/bin/run.sh"]
 CMD ["/opt/sonarqube/bin/sonar.sh"]
-
