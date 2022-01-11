@@ -91,3 +91,7 @@ docker run -p9000:9000 sonarqubem1
 
 ### Credits
 Once again, thank you to [Chris Watts](https://github.com/cj-watts) for helping me with this! If you want to talk with us about Docker, check out Bravo LT's discord server [here](https://discord.gg/84eWHK26CU)!
+
+### Download links
+[Docker (Choose Mac with Apple Chip for M1)](https://docs.docker.com/get-started/#download-and-install-docker)
+[SonarQube](https://www.sonarqube.org/downloads/)
