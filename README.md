@@ -25,7 +25,7 @@ Docker is a tool that simplifies the process of building and running software in
 Apple has started creating their own processors, called M1. They're built using the arm architecture, instead of previously Intel, which uses x86. This change requires native rewrites of applications to work, or translation using Rosetta 2.0 to virtualize the x86 architecture for M1 arm based processors.
 </details>
 <br>
-Combing all three of these technologies is the reason for this repository. But it wasn't that easy.
+Combining all three of these technologies is the reason for this repository. But it wasn't that easy.
 
 #### SonarQube has a Docker guide that doesn't work on M1 Macs
 
@@ -41,13 +41,13 @@ So, they don't have the right manifest for this architecture. You can force it t
 docker run --platform linux/x86_64 sonarqube 
 ```
 
-But surpsise, surprise, of course that doesn't work. You'll get a big error dump talking about Elasticsearch failing and other stuff:
+But surprise, surprise, of course that doesn't work. You'll get a big error dump talking about Elasticsearch failing and other stuff:
 ```
 unable to install syscall filter
 java.lang.UnsupportedOperationException: seccomp unavailable: CONFIG_SECCOMP not compiled into kernel, CONFIG_SECCOMP and CONFIG_SECCOMP_FILTER are needed
 etc. etc.
 ```
-After further investigation, turns out this is something SonarQube isn't really working on, but there's [definitely requests](https://jira.sonarsource.com/browse/CPP-2882) for it.
+After further investigation, it turns out that this is something SonarQube isn't really working on, but there's [definitely requests](https://jira.sonarsource.com/browse/CPP-2882) for it.
 
 After SonarQube gave the simple response that "we don't support M1" another developer [created a solution](https://github.com/SonarSource/docker-sonarqube/issues/475). This was great, but after trying to pull down *mwizner*'s Docker, I got this error:
 ```
@@ -57,7 +57,7 @@ Also, [mwizner's solution](https://hub.docker.com/r/mwizner/sonarqube) was for v
 
 ### The Working Solution
 
-A big thanks to my colleague [Chris Watts](https://github.com/cj-watts) for helping me with this, because I'm a beginner at Docker and was going down the wrong path of trying to containerize SonarQube's source web app manually. I knew that code worked without Docker for sure, but I didn't understand how to get Docker to work with specific architectures.
+A big thanks to my colleague [Chris Watts](https://github.com/cj-watts) for helping me with this, because I'm a beginner at Docker and was going down the wrong path of trying to containerize SonarQube's source web app manually. I knew the source code worked without Docker for sure, but I didn't understand how to get Docker to work with specific architectures.
 
 [This file](https://github.com/sonar-scala/docker-sonarqube/blob/arm64/8/community/arm64.Dockerfile) was the starting point, provided by mwizner's original solution. Chris provided changes to this in some key places:
 
@@ -90,8 +90,9 @@ docker run -p9000:9000 sonarqubem1
 ```
 
 ### Credits
-Once again, thank you to [Chris Watts](https://github.com/cj-watts) for helping me with this! If you want to talk with us about Docker, check out Bravo LT's discord server [here](https://discord.gg/84eWHK26CU)!
+Once again, thank you to [Chris Watts](https://github.com/cj-watts) for helping me with this! If you want to talk with us about Docker, check out Bravo LT's Discord server [here](https://discord.gg/84eWHK26CU)!
 
 ### Download links
 [Docker (Choose Mac with Apple Chip for M1)](https://docs.docker.com/get-started/#download-and-install-docker)
+
 [SonarQube](https://www.sonarqube.org/downloads/)
