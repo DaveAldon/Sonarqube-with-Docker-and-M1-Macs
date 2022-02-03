@@ -1,6 +1,17 @@
 # SonarQube + Docker + M1
 
+[<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">](https://hub.docker.com/r/davealdon/sonarqube-with-docker-and-m1-macs)
 ##### TL;DR:
+
+Pull down the docker build and run it:
+```
+docker pull davealdon/sonarqube-with-docker-and-m1-macs
+```
+
+Specify a port number so that you can go to the Sonar URL: http://localhost:9000/
+
+#### OR
+
 Clone the repo on your M1 Mac, and run the following command:
 ```
 docker build -f arm64.Dockerfile -t sonarqubem1 .
