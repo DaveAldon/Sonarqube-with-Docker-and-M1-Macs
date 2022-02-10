@@ -81,7 +81,7 @@ ZLIB_URL="https://mirrors.dotsrc.org/archlinuxarm/arm/core/zlib-1%3A1.2.11-5-arm
 
 2. The latest version of SonarQube:
 ```
-ARG SONARQUBE_VERSION=9.2.4.50792
+ARG SONARQUBE_VERSION=9.3.0.51899
 ```
 
 3. Many frameworks expect the app to be stopped using SIGINT, or Control-C. When you run the command `Docker stop`, you're telling Docker to send a signal to the container to stop. By default, this command is `SIGTERM`, but some apps may be configured to listen to something else like `SIGUSR1`. Therefore, this command was added to manually make sure that `SIGINT` is sent to the container upon stopping. This is more of a QoL update, and is [explained more here](https://docs.docker.com/engine/reference/commandline/stop/).
