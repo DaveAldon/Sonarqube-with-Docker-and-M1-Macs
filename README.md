@@ -1,6 +1,8 @@
 # SonarQube + Docker + M1
 
 [<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">](https://hub.docker.com/r/davealdon/sonarqube-with-docker-and-m1-macs)
+
+[![](https://img.shields.io/badge/SonarQube-v9.3.0.51899-blue)](https://img.shields.io/badge/SonarQube-v9.3.0.51899-blue)
 ##### TL;DR:
 
 Pull down the docker build and run it:
