@@ -12,8 +12,8 @@ RUN set -eux; \
   apk add --no-cache tzdata --virtual .build-deps binutils curl gnupg zstd; \
   GLIBC_VER="2.32-r0"; \
   ALPINE_GLIBC_REPO="https://github.com/ljfranklin/alpine-pkg-glibc/releases/download"; \
-  GCC_LIBS_URL="https://mirrors.dotsrc.org/archlinuxarm/arm/core/gcc-libs-10.2.0-1-arm.pkg.tar.xz"; \
-  ZLIB_URL="https://mirrors.dotsrc.org/archlinuxarm/arm/core/zlib-1%3A1.2.11-5-arm.pkg.tar.xz"; \
+  GCC_LIBS_URL="https://mirrors.dotsrc.org/archlinuxarm/aarch64/core/gcc-libs-11.2.0-3-aarch64.pkg.tar.xz"; \
+  ZLIB_URL="https://mirrors.dotsrc.org/archlinuxarm/aarch64/core/zlib-1%3A1.2.11-5-aarch64.pkg.tar.xz"; \
   curl -LfsS https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub; \
   SGERRAND_RSA_SHA256="823b54589c93b02497f1ba4dc622eaef9c813e6b0f0ebbb2f771e32adf9f4ef2"; \
   echo "${SGERRAND_RSA_SHA256} */etc/apk/keys/sgerrand.rsa.pub" | sha256sum -c - ; \
