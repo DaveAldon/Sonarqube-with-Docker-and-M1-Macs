@@ -2,7 +2,7 @@
 
 [<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">](https://hub.docker.com/r/davealdon/sonarqube-with-docker-and-m1-macs)
 
-[![](https://img.shields.io/badge/SonarQube-v9.3.0.51899-blue)](https://img.shields.io/badge/SonarQube-v9.3.0.51899-blue)
+[![](https://img.shields.io/badge/SonarQube-v9.4.0.54424-blue)](https://img.shields.io/badge/SonarQube-v9.4.0.54424-blue)
 ##### TL;DR:
 
 Pull down the docker build and run it:
@@ -20,6 +20,16 @@ docker build -f arm64.Dockerfile -t sonarqubem1 .
 docker run -p9000:9000 sonarqubem1
 ```
 Then go to the URL: http://localhost:9000/
+
+#### How can I use a different version of SonarQube than what's in this image?
+
+I'm happy to update the project version for you, however if you need a new version quickly, find the full build number you want from [the SonarQube distribution binary directory](https://binaries.sonarsource.com/?prefix=Distribution/sonarqube/), and plug it into this arg in the `arm64.Dockerfile` file:
+
+```bash
+ARG SONARQUBE_VERSION=X.X.X.X
+```
+
+
 
 ### Tell me more!
 
