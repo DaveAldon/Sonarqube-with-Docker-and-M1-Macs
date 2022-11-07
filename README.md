@@ -1,5 +1,14 @@
 # SonarQube + Docker + M1
 
+### Update (As of November 7, 2022)
+SonarQube has confirmed that they're working on an arm64 compatible image, and provided a _local build_ [solution](https://community.sonarsource.com/t/apple-silicon-support-sonarqube-and-sonarscanner/55094/15):
+```bash
+git clone git@github.com:SonarSource/docker-sonarqube.git
+cd docker-sonarqube/9/community
+git checkout 9.7.0 # you can specify which sonarqube version to build
+docker build -t sonarqube:9.7.0-community .
+```
+
 [<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">](https://hub.docker.com/r/davealdon/sonarqube-with-docker-and-m1-macs)
 
 [![](https://img.shields.io/badge/SonarQube-v9.4.0.54424-blue)](https://img.shields.io/badge/SonarQube-v9.4.0.54424-blue)
